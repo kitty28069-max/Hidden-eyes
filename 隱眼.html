@@ -3,276 +3,291 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>亞洲熱門隱眼品牌分析</title>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-    margin:0;
-    font-family:"Noto Sans TC",sans-serif;
-    background:linear-gradient(135deg,#ffd6e7,#d9e8ff,#fff2c7);
+    font-family:"Microsoft JhengHei",sans-serif;
+    background:linear-gradient(135deg,#ffe0f0,#e0f7ff);
+    color:#333;
 }
-
 nav{
     position:sticky;
     top:0;
-    background:white;
+    background:#fff;
     padding:15px;
     text-align:center;
     box-shadow:0 2px 10px rgba(0,0,0,.1);
 }
-
 nav a{
-    margin:10px;
     text-decoration:none;
-    color:#666;
+    color:#ff4f9a;
+    margin:0 10px;
     font-weight:bold;
 }
-
-section{
-    padding:60px 10%;
+.hero img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
 }
-
-h1,h2{
+.hero-text{
     text-align:center;
+    padding:30px;
 }
-
-.brand-grid{
+.section{
+    padding:50px 20px;
+}
+.cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
 }
-
 .card{
-    background:white;
+    background:#fff;
     border-radius:20px;
-    padding:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
-
 .card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+.content{
+    padding:20px;
+}
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.product{
+    background:#fff;
+    border-radius:20px;
+    padding:15px;
+    text-align:center;
+}
+.product img{
     width:100%;
     border-radius:15px;
 }
-
 table{
     width:100%;
     border-collapse:collapse;
     background:white;
 }
-
 th,td{
-    padding:12px;
     border:1px solid #ddd;
+    padding:12px;
     text-align:center;
 }
-
 th{
-    background:#cdb4ff;
+    background:#ff7eb6;
     color:white;
 }
-
 footer{
-    background:#cdb4ff;
+    background:#222;
     color:white;
-    text-align:center;
     padding:30px;
+    text-align:center;
 }
-
-@media(max-width:768px){
-    section{
-        padding:40px 20px;
-    }
+.btn{
+    display:inline-block;
+    background:#ff4f9a;
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+    text-decoration:none;
 }
 </style>
-
 </head>
 
 <body>
 
 <nav>
-<a href="#market">市場分析</a>
-<a href="#brands">品牌介紹</a>
+<a href="#brands">品牌分析</a>
 <a href="#products">熱門款式</a>
 <a href="#compare">品牌比較</a>
-<a href="#readme">README</a>
 </nav>
 
-<section>
-<h1>👁 亞洲熱門隱眼品牌分析</h1>
-<p align="center">
-台灣、日本、韓國熱門彩色隱形眼鏡完整比較指南
-</p>
-</section>
+<header class="hero">
+<img src="images/banner.png" alt="Banner">
+</header>
 
-<section id="market">
-<h2>📊 市場分析</h2>
+<div class="hero-text">
+<h1>亞洲熱門隱眼品牌分析</h1>
+<p>日本 × 韓國 × 台灣人氣隱眼推薦指南</p>
+</div>
 
-<p>
-近年消費者除了重視舒適度與透氧率外，也越來越重視自然妝感、
-混血感效果及日常搭配性。韓系品牌主打放大與混血感，
-日系品牌強調透明感與裸妝效果，台灣品牌則以高CP值及舒適度見長。
-</p>
-</section>
+<section id="brands" class="section">
+<h2>品牌分析</h2><br>
 
-<section id="brands">
-<h2>🌟 日韓台熱門品牌</h2>
-
-<div class="brand-grid">
+<div class="cards">
 
 <div class="card">
-<img src="https://drive.google.com/uc?export=view&id=1moc9CVwHvbylL287vnOpBgZkmfnzCpM8" alt="OLENS">
-<h3>OLENS（韓國）</h3>
-<p>人氣款：Spanish Real Gray</p>
-<p>特色：混血感、花色豐富</p>
+<img src="images/olens-model.png">
+<div class="content">
+<h3>OLENS</h3>
+<p>熱門色系豐富，自然混血感強。</p>
+</div>
 </div>
 
 <div class="card">
 <img src="images/revia-model.png">
-<h3>ReVIA（日本）</h3>
-<p>特色：自然裸妝感</p>
+<div class="content">
+<h3>ReVIA</h3>
+<p>日系裸眼感代表品牌。</p>
+</div>
 </div>
 
 <div class="card">
 <img src="images/molak-model.png">
-<h3>MOLAK（日本）</h3>
-<p>特色：透明感妝容</p>
+<div class="content">
+<h3>MOLAK</h3>
+<p>透明感妝容首選。</p>
+</div>
 </div>
 
 <div class="card">
 <img src="images/topards-model.png">
-<h3>TOPARDS（日本）</h3>
-<p>特色：日常自然系</p>
+<div class="content">
+<h3>TOPARDS</h3>
+<p>自然放大效果佳。</p>
+</div>
 </div>
 
 <div class="card">
 <img src="images/lenstown-model.png">
-<h3>LENSTOWN（韓國）</h3>
-<p>特色：舒適度高</p>
+<div class="content">
+<h3>LENSTOWN</h3>
+<p>舒適度高，長時間配戴推薦。</p>
+</div>
 </div>
 
 <div class="card">
 <img src="images/hydron-model.png">
-<h3>海昌（台灣）</h3>
-<p>特色：高CP值</p>
+<div class="content">
+<h3>HYDRON 海昌</h3>
+<p>台灣高人氣品牌。</p>
+</div>
 </div>
 
 </div>
 </section>
 
-<section id="products">
-<h2>👀 熱門款式展示</h2>
+<section id="products" class="section">
+<h2>熱門款式展示</h2><br>
 
-<div class="brand-grid">
+<div class="product-grid">
 
-<div class="card">
-<img src="images/olens-model.png">
+<div class="product">
 <img src="images/spanish-real-gray.png">
-
 <h3>Spanish Real Gray</h3>
-
-<p>品牌：OLENS</p>
-<p>顏色：Gray 灰色</p>
-<p>直徑(DIA)：14.2mm</p>
-<p>著色直徑：13.3mm</p>
-<p>價格：NT$350-450</p>
-<p>舒適度：★★★★★</p>
-<p>適合族群：混血妝容、韓系風格</p>
+<p>OLENS</p>
 </div>
 
-<div class="card">
-<img src="images/revia-model.png">
+<div class="product">
 <img src="images/melty-mist.png">
-
 <h3>Melty Mist</h3>
-
-<p>品牌：ReVIA</p>
-<p>顏色：Brown</p>
-<p>直徑(DIA)：14.1mm</p>
-<p>價格：NT$300-400</p>
-<p>舒適度：★★★★★</p>
-<p>適合族群：上班族、學生</p>
+<p>ReVIA</p>
 </div>
 
-<div class="card">
-<img src="images/molak-model.png">
+<div class="product">
 <img src="images/misty-ash.png">
-
 <h3>Misty Ash</h3>
+<p>MOLAK</p>
+</div>
 
-<p>品牌：MOLAK</p>
-<p>顏色：Ash Gray</p>
-<p>直徑(DIA)：14.2mm</p>
-<p>價格：NT$350-450</p>
-<p>舒適度：★★★★☆</p>
-<p>適合族群：日系透明感妝容</p>
+<div class="product">
+<img src="images/date-toric.png">
+<h3>Date Toric</h3>
+<p>LENSTOWN</p>
+</div>
+
+<div class="product">
+<img src="images/venus-brown.png">
+<h3>Venus Brown</h3>
+<p>TOPARDS</p>
+</div>
+
+<div class="product">
+<img src="images/crystal-brown.png">
+<h3>Crystal Brown</h3>
+<p>TOPARDS</p>
 </div>
 
 </div>
 </section>
 
-<section id="compare">
-<h2>📈 品牌比較表</h2>
+<section id="compare" class="section">
+<h2>品牌比較表</h2><br>
 
 <table>
 <tr>
 <th>品牌</th>
 <th>價格</th>
+<th>DIA</th>
 <th>舒適度</th>
-<th>自然度</th>
-<th>花色</th>
+<th>適合族群</th>
 </tr>
 
 <tr>
 <td>OLENS</td>
-<td>★★★★☆</td>
+<td>NT$350-500</td>
+<td>14.2mm</td>
 <td>★★★★★</td>
-<td>★★★★★</td>
-<td>★★★★★</td>
+<td>混血妝容</td>
 </tr>
 
 <tr>
 <td>ReVIA</td>
-<td>★★★☆☆</td>
+<td>NT$300-450</td>
+<td>14.1mm</td>
 <td>★★★★★</td>
-<td>★★★★★</td>
-<td>★★★★☆</td>
+<td>日常通勤</td>
 </tr>
 
 <tr>
 <td>MOLAK</td>
+<td>NT$320-450</td>
+<td>14.2mm</td>
 <td>★★★★☆</td>
-<td>★★★★☆</td>
-<td>★★★★★</td>
-<td>★★★★☆</td>
+<td>透明感妝容</td>
 </tr>
 
 <tr>
-<td>海昌</td>
+<td>TOPARDS</td>
+<td>NT$320-450</td>
+<td>14.1mm</td>
 <td>★★★★★</td>
-<td>★★★★☆</td>
-<td>★★★★☆</td>
+<td>自然放大</td>
+</tr>
+
+<tr>
+<td>LENSTOWN</td>
+<td>NT$300-420</td>
+<td>14.1mm</td>
 <td>★★★★★</td>
+<td>長時間配戴</td>
+</tr>
+
+<tr>
+<td>HYDRON</td>
+<td>NT$250-380</td>
+<td>14.1mm</td>
+<td>★★★★☆</td>
+<td>學生族群</td>
 </tr>
 
 </table>
 </section>
 
-<section id="readme">
-<h2>📖 README</h2>
-
-<p>
-本網站以亞洲熱門隱眼品牌為主題，
-分析日本、韓國及台灣熱門品牌的特色、價格、
-舒適度、直徑規格及適合族群。
-採用響應式設計(RWD)，支援手機、平板與電腦瀏覽。
-網站包含市場分析、品牌介紹、產品展示與品牌比較功能。
-</p>
-
-</section>
-
 <footer>
-© 2026 亞洲熱門隱眼品牌分析網站
+<h3>README</h3>
+<p>本網站為日韓台熱門隱眼品牌分析介紹網站，採用 RWD 響應式設計，可於手機與電腦瀏覽。</p>
+<br>
+<a href="#top" class="btn">返回頂部</a>
 </footer>
 
 </body>
